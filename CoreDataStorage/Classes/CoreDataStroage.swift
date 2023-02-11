@@ -9,15 +9,15 @@ import Foundation
 import CoreData
 import Combine
 
-open class CoreDataStorage {
+public class CoreDataStorage {
     // Created CoreDataStorages
     static private var storages: [String: CoreDataStorage] = [:]
     
     // Default CoreDataStorage
-    static let `default`: CoreDataStorage = CoreDataStorage(name: "CoreDataStorage")
+    public static let `default`: CoreDataStorage = CoreDataStorage(name: "CoreDataStorage")
     
     // Custom CoreDataStorage with Name
-    static func shared(name: String = "CoreDataStorage") -> CoreDataStorage {
+    public static func shared(name: String = "CoreDataStorage") -> CoreDataStorage {
         guard let storage = storages[name] else {
             return CoreDataStorage(name: name)
         }
