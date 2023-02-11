@@ -79,35 +79,12 @@ extension CoreDataStorage {
     ///   - predicate: predicate
     ///   - sortDescriptors: Sort Descripctors
     /// - Returns: read All Entities into Structures
-    func readAll<O: Entitable>(type: O.Type, predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]? = nil) -> AnyPublisher<[O], Error> {
+    func read<O: Entitable>(type: O.Type, predicate: NSPredicate? = nil, sortDescriptors: [NSSortDescriptor]? = nil) -> AnyPublisher<[O], Error> {
         Future<[O], Error> { promise in
             self.persistentContainer.performBackgroundTask { context in
                 do {
                     let request: NSFetchRequest = O.EntityType.fetchRequest()
                     request.predicate = predicate
-                    request.sortDescriptors = sortDescriptors
-                    guard let result = try context.fetch(request).compactMap({ ($0 as? O.EntityType)?.toObject() }) as? [O] else {
-                        throw CoreDataStorageDetailError.wrongConnectError
-                    }
-                    promise(.success(result))
-                } catch {
-                    promise(.failure(CoreDataStorageError.readError(error)))
-                }
-            }
-        }
-        .eraseToAnyPublisher()
-    }
-    
-    /// ReadAll
-    /// - Parameters:
-    ///   - type: Struct: Entitable Type to Read
-    ///   - sortDescriptors: Sort Descripctors
-    /// - Returns: read All Entities into Structures
-    func readAll<O: Entitable>(type: O.Type, sortDescriptors: [NSSortDescriptor]? = nil) -> AnyPublisher<[O], Error> {
-        Future<[O], Error> { promise in
-            self.persistentContainer.performBackgroundTask { context in
-                do {
-                    let request: NSFetchRequest = O.EntityType.fetchRequest()
                     request.sortDescriptors = sortDescriptors
                     guard let result = try context.fetch(request).compactMap({ ($0 as? O.EntityType)?.toObject() }) as? [O] else {
                         throw CoreDataStorageDetailError.wrongConnectError
