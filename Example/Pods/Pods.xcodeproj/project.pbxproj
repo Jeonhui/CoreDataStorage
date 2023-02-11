@@ -65,10 +65,10 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5BBD803DF70EE642452CCB52C08E7AD /* Pods-CoreDataStorage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoreDataStorage_Tests.modulemap"; sourceTree = "<group>"; };
 		A5CC72372998036000A5C613 /* CoreDataStroage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStroage.swift; path = CoreDataStorage/Classes/CoreDataStroage.swift; sourceTree = "<group>"; };
-		A5CC723A2998038C00A5C613 /* Entitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Entitable.swift; path = ../CoreDataStorage/Classes/Protocols/Entitable.swift; sourceTree = "<group>"; };
-		A5CC723C2998039300A5C613 /* Objectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Objectable.swift; path = ../CoreDataStorage/Classes/Protocols/Objectable.swift; sourceTree = "<group>"; };
-		A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStorageError.swift; path = ../CoreDataStorage/Classes/Errors/CoreDataStorageError.swift; sourceTree = "<group>"; };
-		A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStorageDetailError.swift; path = ../CoreDataStorage/Classes/Errors/CoreDataStorageDetailError.swift; sourceTree = "<group>"; };
+		A5CC723A2998038C00A5C613 /* Entitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitable.swift; sourceTree = "<group>"; };
+		A5CC723C2998039300A5C613 /* Objectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objectable.swift; sourceTree = "<group>"; };
+		A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageError.swift; sourceTree = "<group>"; };
+		A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageDetailError.swift; sourceTree = "<group>"; };
 		BF31EB2C855C6F4FF261732365D01B01 /* CoreDataStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CoreDataStorage.debug.xcconfig; sourceTree = "<group>"; };
 		C1E23B521FD62099EF495937B78D354E /* CoreDataStorage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreDataStorage-umbrella.h"; sourceTree = "<group>"; };
 		C4BA4FF325FD43908082C20B52432562 /* CoreDataStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +166,8 @@
 				A5CC723A2998038C00A5C613 /* Entitable.swift */,
 				A5CC723C2998039300A5C613 /* Objectable.swift */,
 			);
-			path = Protocols;
+			name = Protocols;
+			path = CoreDataStorage/Classes/Protocols;
 			sourceTree = "<group>";
 		};
 		A5CC723E2998048A00A5C613 /* Errors */ = {
@@ -175,7 +176,8 @@
 				A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */,
 				A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */,
 			);
-			path = Errors;
+			name = Errors;
+			path = CoreDataStorage/Classes/Errors;
 			sourceTree = "<group>";
 		};
 		A6D3B39AADA3C27CA6D9B3D4C02E1A32 /* Pod */ = {
