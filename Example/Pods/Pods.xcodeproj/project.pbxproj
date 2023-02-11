@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B5BB894D1489FFC0DF5E3F0ACA3D523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5F6B469140737CEE95C839D3061CB862 /* Pods-CoreDataStorage_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5836FFBEB055347CB8B40E14D05C413 /* Pods-CoreDataStorage_Tests-dummy.m */; };
+		7C636DE88F1BE16D228911264C55C803 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8AC3D8B49E0A766EAD84C1FA27275B1A /* CoreDataStorage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CD481F48F5EE7CBE4F6D4BAF4FA1D /* CoreDataStorage-dummy.m */; };
+		A5CC72382998036000A5C613 /* CoreDataStroage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC72372998036000A5C613 /* CoreDataStroage.swift */; };
+		A5CC723B2998038C00A5C613 /* Entitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC723A2998038C00A5C613 /* Entitable.swift */; };
+		A5CC723D2998039300A5C613 /* Objectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC723C2998039300A5C613 /* Objectable.swift */; };
+		A5CC72402998049F00A5C613 /* CoreDataStorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */; };
+		A5CC7242299804B900A5C613 /* CoreDataStorageDetailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */; };
+		A87672A00B2C369CF6962BBD2D46AE44 /* Pods-CoreDataStorage_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AAE6D1335D3E6C9953F2B71790F08A6 /* Pods-CoreDataStorage_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA48066A7250638A55E818D37AA87E4D /* Pods-CoreDataStorage_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DFD0D7D961688E6A781B0921FCA /* Pods-CoreDataStorage_Example-dummy.m */; };
+		B7EF92145FCB313AD9DAD5A54DAC0CAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D5A6E5A28BBB1F79D1511CC0CFF22EC0 /* Pods-CoreDataStorage_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7407A4474D96C4A6EA3D0CA00805C2 /* Pods-CoreDataStorage_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9D695C914E9292C7E7B3AFE5AA6F95C /* CoreDataStorage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1E23B521FD62099EF495937B78D354E /* CoreDataStorage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9987211158906F7DA5ADCFF3B725FAEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84BF6642B935B78C3E15B964262AF0A2;
+			remoteInfo = CoreDataStorage;
+		};
+		9DD3A606498D661207A5E402CFB43359 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11975A3F8804786854175AF292A0FB24;
+			remoteInfo = "Pods-CoreDataStorage_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E91D8EFFA7A7ACB6BBBDEFDB28175B5 /* Pods-CoreDataStorage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoreDataStorage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0FA1C3328B607A34E459765E44A4B80E /* Pods-CoreDataStorage_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoreDataStorage_Example.modulemap"; sourceTree = "<group>"; };
+		1240688ACA892AFFF826BFB16301A697 /* CoreDataStorage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreDataStorage-prefix.pch"; sourceTree = "<group>"; };
+		19C51AC4E57DF122705D17AD23C52AF3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1C1CD481F48F5EE7CBE4F6D4BAF4FA1D /* CoreDataStorage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStorage-dummy.m"; sourceTree = "<group>"; };
+		1DD57EDA69F59A19CBA667A15F97DB26 /* CoreDataStorage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CoreDataStorage.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		22FBCBF92038192F563DFEFED7913EC8 /* Pods-CoreDataStorage_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoreDataStorage_Example-Info.plist"; sourceTree = "<group>"; };
+		34403C4667D8FFE96FBF663211415A48 /* Pods-CoreDataStorage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreDataStorage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		403A1B09AD6D3F12BE8E890F2F6BC7B3 /* Pods-CoreDataStorage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreDataStorage_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4B51C5B3347677C38960B66F529D8CAD /* Pods-CoreDataStorage_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoreDataStorage_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5069D4D4BE54625BC98AFC73CC6BFE88 /* CoreDataStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CoreDataStorage.release.xcconfig; sourceTree = "<group>"; };
+		555A7DFD0D7D961688E6A781B0921FCA /* Pods-CoreDataStorage_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoreDataStorage_Example-dummy.m"; sourceTree = "<group>"; };
+		5B7407A4474D96C4A6EA3D0CA00805C2 /* Pods-CoreDataStorage_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoreDataStorage_Example-umbrella.h"; sourceTree = "<group>"; };
+		5D09BCD7A0B5D262237072F08122A81B /* Pods-CoreDataStorage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreDataStorage_Example.release.xcconfig"; sourceTree = "<group>"; };
+		663D0181E4D1F41DBA742A337C103D0A /* Pods_CoreDataStorage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataStorage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AAE6D1335D3E6C9953F2B71790F08A6 /* Pods-CoreDataStorage_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoreDataStorage_Tests-umbrella.h"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		732A963377BF49DEFBBD8F3BAF10D387 /* Pods-CoreDataStorage_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoreDataStorage_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CA54FF6FE046E90ABC0C9875BD4EF92 /* CoreDataStorage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CoreDataStorage.modulemap; sourceTree = "<group>"; };
+		8208C2F89AAA466A72C8DFDBF154CBC5 /* Pods_CoreDataStorage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataStorage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8294A482B1DDC83B9F15D3A1FCA89140 /* Pods-CoreDataStorage_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoreDataStorage_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5BBD803DF70EE642452CCB52C08E7AD /* Pods-CoreDataStorage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CoreDataStorage_Tests.modulemap"; sourceTree = "<group>"; };
+		A5CC72372998036000A5C613 /* CoreDataStroage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStroage.swift; path = CoreDataStorage/Classes/CoreDataStroage.swift; sourceTree = "<group>"; };
+		A5CC723A2998038C00A5C613 /* Entitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Entitable.swift; path = ../CoreDataStorage/Classes/Protocols/Entitable.swift; sourceTree = "<group>"; };
+		A5CC723C2998039300A5C613 /* Objectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Objectable.swift; path = ../CoreDataStorage/Classes/Protocols/Objectable.swift; sourceTree = "<group>"; };
+		A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStorageError.swift; path = ../CoreDataStorage/Classes/Errors/CoreDataStorageError.swift; sourceTree = "<group>"; };
+		A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStorageDetailError.swift; path = ../CoreDataStorage/Classes/Errors/CoreDataStorageDetailError.swift; sourceTree = "<group>"; };
+		BF31EB2C855C6F4FF261732365D01B01 /* CoreDataStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CoreDataStorage.debug.xcconfig; sourceTree = "<group>"; };
+		C1E23B521FD62099EF495937B78D354E /* CoreDataStorage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreDataStorage-umbrella.h"; sourceTree = "<group>"; };
+		C4BA4FF325FD43908082C20B52432562 /* CoreDataStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D6801E9B1341286EDF95F974571EEB /* Pods-CoreDataStorage_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoreDataStorage_Tests-Info.plist"; sourceTree = "<group>"; };
+		CB1F716826A4A303536DE661F4D4E723 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D5836FFBEB055347CB8B40E14D05C413 /* Pods-CoreDataStorage_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoreDataStorage_Tests-dummy.m"; sourceTree = "<group>"; };
+		E0EA765A36FEEF03178B215FBEBAF0E6 /* CoreDataStorage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CoreDataStorage-Info.plist"; sourceTree = "<group>"; };
+		F98D8865097743E218054BF96F983CB5 /* Pods-CoreDataStorage_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoreDataStorage_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FB1E6B7E41D7717608DA36115F288ED6 /* Pods-CoreDataStorage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreDataStorage_Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74D58C91AB29DBE7E4C1DD9113250C23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EF92145FCB313AD9DAD5A54DAC0CAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D321E4D9B3698EFF096CDDA6E7B5C933 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C636DE88F1BE16D228911264C55C803 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8408AC9E151595D675617DC25368C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5BB894D1489FFC0DF5E3F0ACA3D523 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		049B65044BEEA6F5D5E8DC951448658F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BA4FF325FD43908082C20B52432562 /* CoreDataStorage.framework */,
+				663D0181E4D1F41DBA742A337C103D0A /* Pods_CoreDataStorage_Example.framework */,
+				8208C2F89AAA466A72C8DFDBF154CBC5 /* Pods_CoreDataStorage_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D24612E164C0C7175039ED1E314BC8 /* Pods-CoreDataStorage_Example */ = {
+			isa = PBXGroup;
+			children = (
+				0FA1C3328B607A34E459765E44A4B80E /* Pods-CoreDataStorage_Example.modulemap */,
+				4B51C5B3347677C38960B66F529D8CAD /* Pods-CoreDataStorage_Example-acknowledgements.markdown */,
+				F98D8865097743E218054BF96F983CB5 /* Pods-CoreDataStorage_Example-acknowledgements.plist */,
+				555A7DFD0D7D961688E6A781B0921FCA /* Pods-CoreDataStorage_Example-dummy.m */,
+				8294A482B1DDC83B9F15D3A1FCA89140 /* Pods-CoreDataStorage_Example-frameworks.sh */,
+				22FBCBF92038192F563DFEFED7913EC8 /* Pods-CoreDataStorage_Example-Info.plist */,
+				5B7407A4474D96C4A6EA3D0CA00805C2 /* Pods-CoreDataStorage_Example-umbrella.h */,
+				FB1E6B7E41D7717608DA36115F288ED6 /* Pods-CoreDataStorage_Example.debug.xcconfig */,
+				5D09BCD7A0B5D262237072F08122A81B /* Pods-CoreDataStorage_Example.release.xcconfig */,
+			);
+			name = "Pods-CoreDataStorage_Example";
+			path = "Target Support Files/Pods-CoreDataStorage_Example";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		980DB5AE6F65B593B09D7609A544A73B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A99F1FFB6909AF83964257D91AF20208 /* CoreDataStorage */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A5103327E212C70EE211226219B387D8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52D24612E164C0C7175039ED1E314BC8 /* Pods-CoreDataStorage_Example */,
+				DDED1FC735D8D03AAC4603CA8758CB65 /* Pods-CoreDataStorage_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A5CC72392998037D00A5C613 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A5CC723A2998038C00A5C613 /* Entitable.swift */,
+				A5CC723C2998039300A5C613 /* Objectable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A5CC723E2998048A00A5C613 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A5CC723F2998049F00A5C613 /* CoreDataStorageError.swift */,
+				A5CC7241299804B900A5C613 /* CoreDataStorageDetailError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A6D3B39AADA3C27CA6D9B3D4C02E1A32 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1DD57EDA69F59A19CBA667A15F97DB26 /* CoreDataStorage.podspec */,
+				19C51AC4E57DF122705D17AD23C52AF3 /* LICENSE */,
+				CB1F716826A4A303536DE661F4D4E723 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A99F1FFB6909AF83964257D91AF20208 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				A5CC72372998036000A5C613 /* CoreDataStroage.swift */,
+				A5CC723E2998048A00A5C613 /* Errors */,
+				A5CC72392998037D00A5C613 /* Protocols */,
+				A6D3B39AADA3C27CA6D9B3D4C02E1A32 /* Pod */,
+				DD9B96F653592B4FF8D6FD7DD4F67B23 /* Support Files */,
+			);
+			name = CoreDataStorage;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				980DB5AE6F65B593B09D7609A544A73B /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				049B65044BEEA6F5D5E8DC951448658F /* Products */,
+				A5103327E212C70EE211226219B387D8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD9B96F653592B4FF8D6FD7DD4F67B23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CA54FF6FE046E90ABC0C9875BD4EF92 /* CoreDataStorage.modulemap */,
+				1C1CD481F48F5EE7CBE4F6D4BAF4FA1D /* CoreDataStorage-dummy.m */,
+				E0EA765A36FEEF03178B215FBEBAF0E6 /* CoreDataStorage-Info.plist */,
+				1240688ACA892AFFF826BFB16301A697 /* CoreDataStorage-prefix.pch */,
+				C1E23B521FD62099EF495937B78D354E /* CoreDataStorage-umbrella.h */,
+				BF31EB2C855C6F4FF261732365D01B01 /* CoreDataStorage.debug.xcconfig */,
+				5069D4D4BE54625BC98AFC73CC6BFE88 /* CoreDataStorage.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CoreDataStorage";
+			sourceTree = "<group>";
+		};
+		DDED1FC735D8D03AAC4603CA8758CB65 /* Pods-CoreDataStorage_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A5BBD803DF70EE642452CCB52C08E7AD /* Pods-CoreDataStorage_Tests.modulemap */,
+				732A963377BF49DEFBBD8F3BAF10D387 /* Pods-CoreDataStorage_Tests-acknowledgements.markdown */,
+				0E91D8EFFA7A7ACB6BBBDEFDB28175B5 /* Pods-CoreDataStorage_Tests-acknowledgements.plist */,
+				D5836FFBEB055347CB8B40E14D05C413 /* Pods-CoreDataStorage_Tests-dummy.m */,
+				C5D6801E9B1341286EDF95F974571EEB /* Pods-CoreDataStorage_Tests-Info.plist */,
+				6AAE6D1335D3E6C9953F2B71790F08A6 /* Pods-CoreDataStorage_Tests-umbrella.h */,
+				34403C4667D8FFE96FBF663211415A48 /* Pods-CoreDataStorage_Tests.debug.xcconfig */,
+				403A1B09AD6D3F12BE8E890F2F6BC7B3 /* Pods-CoreDataStorage_Tests.release.xcconfig */,
+			);
+			name = "Pods-CoreDataStorage_Tests";
+			path = "Target Support Files/Pods-CoreDataStorage_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AF04A933D9CD01B46B5E6E9960ECC00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A6E5A28BBB1F79D1511CC0CFF22EC0 /* Pods-CoreDataStorage_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65FC193AAE2A1165CB9A2E94A98FBD19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D695C914E9292C7E7B3AFE5AA6F95C /* CoreDataStorage-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20F62166F072B887EEFF7A35FD48570 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87672A00B2C369CF6962BBD2D46AE44 /* Pods-CoreDataStorage_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CD7E525E4C9C66BA9971E29B979F68B /* Pods-CoreDataStorage_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F4E977FC5C2B645ECFF49C8A3E2381 /* Build configuration list for PBXNativeTarget "Pods-CoreDataStorage_Tests" */;
+			buildPhases = (
+				E20F62166F072B887EEFF7A35FD48570 /* Headers */,
+				64E69CCC216109EDEE3696F0CB1DACE0 /* Sources */,
+				EB8408AC9E151595D675617DC25368C8 /* Frameworks */,
+				D56AE8CCCDFC0A049CC40D77DC987073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D70BB5527680D0BCE61D2D67CC4027E4 /* PBXTargetDependency */,
+			);
+			name = "Pods-CoreDataStorage_Tests";
+			productName = Pods_CoreDataStorage_Tests;
+			productReference = 8208C2F89AAA466A72C8DFDBF154CBC5 /* Pods_CoreDataStorage_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		11975A3F8804786854175AF292A0FB24 /* Pods-CoreDataStorage_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A6CA75C41A4812201BA4C2375BB3CD /* Build configuration list for PBXNativeTarget "Pods-CoreDataStorage_Example" */;
+			buildPhases = (
+				4AF04A933D9CD01B46B5E6E9960ECC00 /* Headers */,
+				1F8D7F48944CEB9127CD1981BAE222C2 /* Sources */,
+				74D58C91AB29DBE7E4C1DD9113250C23 /* Frameworks */,
+				C5C1BCDC71D50F08A90EEF6BC30D4D44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				095A199DC02F7C5126B26AFC9AAEBF51 /* PBXTargetDependency */,
+			);
+			name = "Pods-CoreDataStorage_Example";
+			productName = Pods_CoreDataStorage_Example;
+			productReference = 663D0181E4D1F41DBA742A337C103D0A /* Pods_CoreDataStorage_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84BF6642B935B78C3E15B964262AF0A2 /* CoreDataStorage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7226B88301BE81C5C513E4246877A09F /* Build configuration list for PBXNativeTarget "CoreDataStorage" */;
+			buildPhases = (
+				65FC193AAE2A1165CB9A2E94A98FBD19 /* Headers */,
+				D03A364CAE317725B256C1F2C91F6C10 /* Sources */,
+				D321E4D9B3698EFF096CDDA6E7B5C933 /* Frameworks */,
+				56A0FA426CFF5EAF62410CEFB7A944E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreDataStorage;
+			productName = CoreDataStorage;
+			productReference = C4BA4FF325FD43908082C20B52432562 /* CoreDataStorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 049B65044BEEA6F5D5E8DC951448658F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84BF6642B935B78C3E15B964262AF0A2 /* CoreDataStorage */,
+				11975A3F8804786854175AF292A0FB24 /* Pods-CoreDataStorage_Example */,
+				0CD7E525E4C9C66BA9971E29B979F68B /* Pods-CoreDataStorage_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56A0FA426CFF5EAF62410CEFB7A944E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5C1BCDC71D50F08A90EEF6BC30D4D44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56AE8CCCDFC0A049CC40D77DC987073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F8D7F48944CEB9127CD1981BAE222C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA48066A7250638A55E818D37AA87E4D /* Pods-CoreDataStorage_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64E69CCC216109EDEE3696F0CB1DACE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B469140737CEE95C839D3061CB862 /* Pods-CoreDataStorage_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D03A364CAE317725B256C1F2C91F6C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CC723B2998038C00A5C613 /* Entitable.swift in Sources */,
+				A5CC72402998049F00A5C613 /* CoreDataStorageError.swift in Sources */,
+				A5CC7242299804B900A5C613 /* CoreDataStorageDetailError.swift in Sources */,
+				8AC3D8B49E0A766EAD84C1FA27275B1A /* CoreDataStorage-dummy.m in Sources */,
+				A5CC723D2998039300A5C613 /* Objectable.swift in Sources */,
+				A5CC72382998036000A5C613 /* CoreDataStroage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		095A199DC02F7C5126B26AFC9AAEBF51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreDataStorage;
+			target = 84BF6642B935B78C3E15B964262AF0A2 /* CoreDataStorage */;
+			targetProxy = 9987211158906F7DA5ADCFF3B725FAEC /* PBXContainerItemProxy */;
+		};
+		D70BB5527680D0BCE61D2D67CC4027E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CoreDataStorage_Example";
+			target = 11975A3F8804786854175AF292A0FB24 /* Pods-CoreDataStorage_Example */;
+			targetProxy = 9DD3A606498D661207A5E402CFB43359 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2BC61798A7839AF833B9417E24EAA619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34403C4667D8FFE96FBF663211415A48 /* Pods-CoreDataStorage_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoreDataStorage_Tests/Pods-CoreDataStorage_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoreDataStorage_Tests/Pods-CoreDataStorage_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4404568FE30B2E05A0EC1E75C413ABAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1E6B7E41D7717608DA36115F288ED6 /* Pods-CoreDataStorage_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoreDataStorage_Example/Pods-CoreDataStorage_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoreDataStorage_Example/Pods-CoreDataStorage_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A8DE45950C9FE92FBF097E0D8259A79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D09BCD7A0B5D262237072F08122A81B /* Pods-CoreDataStorage_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoreDataStorage_Example/Pods-CoreDataStorage_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoreDataStorage_Example/Pods-CoreDataStorage_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B61B5A36D256005E48A9BA6899C8F6B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 403A1B09AD6D3F12BE8E890F2F6BC7B3 /* Pods-CoreDataStorage_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CoreDataStorage_Tests/Pods-CoreDataStorage_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoreDataStorage_Tests/Pods-CoreDataStorage_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDD3155F49C996EE7F724D2C2FED8825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF31EB2C855C6F4FF261732365D01B01 /* CoreDataStorage.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CoreDataStorage/CoreDataStorage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CoreDataStorage/CoreDataStorage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CoreDataStorage/CoreDataStorage.modulemap";
+				PRODUCT_MODULE_NAME = CoreDataStorage;
+				PRODUCT_NAME = CoreDataStorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5FCAF5EDE45935A94E663730BA0EABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5069D4D4BE54625BC98AFC73CC6BFE88 /* CoreDataStorage.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CoreDataStorage/CoreDataStorage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CoreDataStorage/CoreDataStorage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CoreDataStorage/CoreDataStorage.modulemap";
+				PRODUCT_MODULE_NAME = CoreDataStorage;
+				PRODUCT_NAME = CoreDataStorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16F4E977FC5C2B645ECFF49C8A3E2381 /* Build configuration list for PBXNativeTarget "Pods-CoreDataStorage_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC61798A7839AF833B9417E24EAA619 /* Debug */,
+				B61B5A36D256005E48A9BA6899C8F6B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7226B88301BE81C5C513E4246877A09F /* Build configuration list for PBXNativeTarget "CoreDataStorage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD3155F49C996EE7F724D2C2FED8825 /* Debug */,
+				C5FCAF5EDE45935A94E663730BA0EABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A6CA75C41A4812201BA4C2375BB3CD /* Build configuration list for PBXNativeTarget "Pods-CoreDataStorage_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4404568FE30B2E05A0EC1E75C413ABAE /* Debug */,
+				A8DE45950C9FE92FBF097E0D8259A79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

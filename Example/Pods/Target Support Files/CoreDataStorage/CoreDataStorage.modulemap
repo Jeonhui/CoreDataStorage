@@ -1,0 +1,6 @@
+framework module CoreDataStorage {
+  umbrella header "CoreDataStorage-umbrella.h"
+
+  export *
+  module * { export * }
+}

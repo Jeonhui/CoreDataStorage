@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+    s.swift_version = '5.0'
+    s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
@@ -28,7 +29,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Jeonhui/CoreDataStorage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'CoreDataStorage/Classes/**/*'
   

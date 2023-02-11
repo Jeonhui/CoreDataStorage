@@ -1,0 +1,16 @@
+PODS:
+  - CoreDataStorage (0.1.0)
+
+DEPENDENCIES:
+  - CoreDataStorage (from `../`)
+
+EXTERNAL SOURCES:
+  CoreDataStorage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CoreDataStorage: 659c978f847b4f256bc909b713b982b03c04d62b
+
+PODFILE CHECKSUM: c81d57881b550beec071a6090de1048c9574eb84
+
+COCOAPODS: 1.11.3
