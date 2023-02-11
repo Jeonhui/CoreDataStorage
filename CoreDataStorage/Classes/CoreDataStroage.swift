@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import Combine
 
-public class CoreDataStorage {
+public final class CoreDataStorage {
     // Created CoreDataStorages
     static private var storages: [String: CoreDataStorage] = [:]
     
@@ -53,7 +53,7 @@ public class CoreDataStorage {
     }
 }
 
-extension CoreDataStorage {
+public extension CoreDataStorage {
     /// Create
     /// - Parameter value: Struct: Entitable
     /// - Returns: created Entity into Struct
