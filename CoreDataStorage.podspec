@@ -31,10 +31,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = 'CoreDataStorage/Classes/**/*'
+  s.source_files = 'Sources/CoreDataStorage/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'CoreDataStorage' => ['CoreDataStorage/Assets/*.png']
+  #   'CoreDataStorage' => ['Sources/CoreDataStorage/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

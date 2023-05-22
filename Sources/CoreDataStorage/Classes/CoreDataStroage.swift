@@ -17,7 +17,7 @@ public final class CoreDataStorage {
     public static let `default`: CoreDataStorage = CoreDataStorage(name: "CoreDataStorage")
     
     // Custom CoreDataStorage with Name
-    public static func shared(name: String = "CoreDataStorage") -> CoreDataStorage {
+    public static func shared(name: String) -> CoreDataStorage {
         guard let storage = storages[name] else {
             return CoreDataStorage(name: name)
         }

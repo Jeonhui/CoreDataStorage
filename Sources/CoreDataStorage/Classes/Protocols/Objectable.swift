@@ -13,4 +13,3 @@ public protocol Objectable {
     associatedtype ObjectType: Entitable
     func toObject() -> ObjectType
 }
-

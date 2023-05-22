@@ -16,7 +16,7 @@ public protocol Entitable {
     func toEntity(in context: NSManagedObjectContext) -> EntityType
 }
 
-extension Entitable {
+public extension Entitable {
     var propertyKeys: [String: Any] {
         let property: [(String, Any)] = Mirror(reflecting: self).children.compactMap { (label: String?, value: Any) in
             guard let label = label else { return nil }
@@ -24,5 +24,6 @@ extension Entitable {
         }
         return Dictionary(property, uniquingKeysWith: { (key, _) in key })
     }
+
 }
 
