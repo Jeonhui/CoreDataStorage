@@ -7,6 +7,7 @@
 
 ### Comfort CoreData with Combine
 
+
 ## Requirements
 
 ![iOSVersion](https://img.shields.io/badge/iOS-13-green.svg) 
@@ -19,33 +20,48 @@
 ```swift
 // Example Struct
 struct Movie {
-  let id: String
-  let title: String
-  let releaseDate: Date
-  let description: String
+    let id: String
+    let title: String
+    let releaseDate: Date
+    let desc: String
 }
 
 // Struct connect Entity
 extension Movie: Entitable {
-  func toEntity(in context: NSManagedObjectContext) -> MovieEntity {
-      let entity: MovieEntity = .init(context: context)
-      entity.id = id
-      entity.title = title
-      entity.releaseDate = releaseDate
-      entity.description = description
-      return entity
-  }
+    // Create toEntity Function
+    func toEntity(in context: NSManagedObjectContext) -> MovieEntity {
+        let entity: MovieEntity = .init(context: context)
+        entity.id = id
+        entity.title = title
+        entity.releaseDate = releaseDate
+        entity.desc = desc
+        return entity
+    }
 }
 
 // Entity connect Struct
 extension MovieEntity: Objectable {
-  func toObject() -> Movie {
-      Movie(id: id,
-            title: title,
-            releaseDate: releaseDate,
-            description: description)
-  }
+    // Create toObject Function
+    public func toObject() -> some Entitable {
+        return Movie(id: id ?? UUID().uuidString,
+                title: title ?? "unknown",
+                releaseDate: releaseDate ?? Date(),
+                desc: desc ?? "")
+    }
 }
+```
+
+### CoreDataStorage
+```swift
+let coreDataStorage = CoreDataStorage.shared(name: "Storage Name")
+
+// CoreDataStorage Function
+func create<O>(_ value: O) -> AnyPublisher<O, Error> where O: Entitable
+func read<O: Entitable>(type: O.Type, predicate: NSPredicate? = nil, sortDescriptors: [NSSortDescriptor]? = nil) -> AnyPublisher<[O], Error>
+func update<O: Entitable>(_ updateObject: O, predicate: NSPredicate, limit: Int? = nil) -> AnyPublisher<[O], Error>
+func update<O: Entitable>(type: O.Type, updateValues: [String: Any], predicate: NSPredicate) -> AnyPublisher<[O], Error>
+func delete<O: Entitable>(_ type: O.Type, predicate: NSPredicate, limit: Int? = nil) -> AnyPublisher<[O], Error>
+func deleteAll<O: Entitable>(_ type: O.Type) -> AnyPublisher<Bool, Error>
 
 ```
 
@@ -57,7 +73,7 @@ func create<O>(_ value: O) -> AnyPublisher<O, Error> where O: Entitable
     
 // MARK: - Example
 func createMovie(movie: Movie) -> AnyPublisher<Movie, Error> {
-  return CoreDataStorage.default.create(movie)
+  return CoreDataStorage.shared(name: "MovieStorage").create(movie)
 }
 ```
 
@@ -70,11 +86,11 @@ func read<O: Entitable>(type: O.Type, predicate: NSPredicate? = nil, sortDescrip
 // MARK: - Example
 func readMovie(id: String) -> AnyPublisher<[Movie], Error> {
   let predicate = NSPredicate(format: "id = %@", "\(id)")
-  return CoreDataStorage.default.read(type: Movie.self, predicate: predicate)
+  return CoreDataStorage.shared(name: "MovieStorage").read(type: Movie.self, predicate: predicate)
 }
 
 func readAllMovie() -> AnyPublisher<[Movie], Error> {
-  return CoreDataStorage.default.read(type: Movie.self)
+  return CoreDataStorage.shared(name: "MovieStorage").read(type: Movie.self)
 }
 ```
 
@@ -88,12 +104,12 @@ func update<O: Entitable>(type: O.Type, updateValues: [String: Any], predicate: 
 // MARK: - Example
 func updateMovie(movie: Movie) -> AnyPublisher<[Movie], Error> {
   let predicate = NSPredicate(format: "id = %@", "\(movie.id)")
-  return CoreDataStorage.default.update(movie, predicate: predicate)
+  return CoreDataStorage.shared(name: "MovieStorage").update(movie, predicate: predicate)
 }
 
 func updateMovie(id: String) -> AnyPublisher<[Movie], Error> {
   let predicate = NSPredicate(format: "id = %@", "\(movie.id)")
-  return CoreDataStorage.default.update(Movie.self, updateValues: [title: "unknown"], predicate: predicate)
+  return CoreDataStorage.shared(name: "MovieStorage").update(Movie.self, updateValues: [title: "unknown"], predicate: predicate)
 }
 ```
 
@@ -107,12 +123,19 @@ func deleteAll<O: Entitable>(_ type: O.Type) -> AnyPublisher<Bool, Error>
 // MARK: - Example
 func deleteMovie(id: String) -> AnyPublisher<[Movie], Error> {
   let predicate = NSPredicate(format: "id = %@", "\(id)")
-  return CoreDataStorage.default.delete(Movie.self, predicate: predicate)
+  return CoreDataStorage.shared(name: "MovieStorage").delete(Movie.self, predicate: predicate)
 }
 
 func deleteAllMovies(movie: Movie) -> AnyPublisher<Bool, Error> {
-  return CoreDataStorage.default.deleteAll(Movie.self)
+  return CoreDataStorage.shared(name: "MovieStorage").deleteAll(Movie.self)
 }
+```
+
+## Swift Package Manager
+- File > Swift Packages > Add Package Dependency
+- Add https://github.com/Jeonhui/CoreDataStorage
+```asm
+https://github.com/Jeonhui/CoreDataStorage
 ```
 
 ## CocoaPods
