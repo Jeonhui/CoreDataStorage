@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CoreDataStorage'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'CoreData with Combine'
 
 # This description is used to generate tags and improve search results.

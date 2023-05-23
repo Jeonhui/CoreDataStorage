@@ -39,8 +39,10 @@ public final class CoreDataStorage {
         }
         return container
     }()
-    
-    // manual Save Context
+}
+
+public extension CoreDataStorage {
+    /// manual Save Context
     func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -51,9 +53,7 @@ public final class CoreDataStorage {
             }
         }
     }
-}
-
-public extension CoreDataStorage {
+    
     /// Create
     /// - Parameter value: Struct: Entitable
     /// - Returns: created Entity into Struct
