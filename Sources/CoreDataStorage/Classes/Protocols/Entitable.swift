@@ -24,6 +24,5 @@ public extension Entitable {
         }
         return Dictionary(property, uniquingKeysWith: { (key, _) in key })
     }
-
 }
 

@@ -30,7 +30,8 @@ public final class CoreDataStorage {
     }
     
     private let persistentContainerName: String
-    private lazy var persistentContainer: NSPersistentContainer = {
+    
+    public lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: persistentContainerName)
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
@@ -102,7 +103,7 @@ public extension CoreDataStorage {
     /// - Parameters:
     ///   - updateObject: updated Structure: Entitable
     ///   - predicate: predicate
-    ///   - limit: umber of entities to update
+    ///   - limit: number of entities to update
     /// - Returns: updated Entities into Structures
     /// If result is empty, Create update Object.
     func update<O: Entitable>(_ updateObject: O, predicate: NSPredicate, limit: Int? = nil) -> AnyPublisher<[O], Error> {
