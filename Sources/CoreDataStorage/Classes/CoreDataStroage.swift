@@ -151,7 +151,7 @@ public extension CoreDataStorage {
     ///   - type: Struct: Entitable Type to Update
     ///   - updateValues: update Values
     ///   - predicate: predicate
-    /// - Returns: predicated Entities to Structures
+    /// - Returns: Structures casted from predicated entities
     func update<O: Entitable>(_ type: O.Type, updateValues: [String: Any], predicate: NSPredicate) -> AnyPublisher<[O], Error> {
         Future<[O], Error> { promise in
             self.persistentContainer.performBackgroundTask { context in
