@@ -8,7 +8,7 @@
 import Foundation
 
 /// Objectable
-/// NSManagedObejct inherit Objectable
+/// NSManagedObejct must inherit Objectable
 public protocol Objectable {
     associatedtype ObjectType: Entitable
     func toObject() -> ObjectType

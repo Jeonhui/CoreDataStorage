@@ -9,7 +9,7 @@ import CoreData
 
 
 /// Entitable
-/// Struct inherit Entitable
+/// Struct must inherit Entitable
 public protocol Entitable {
     var propertyKeyValues: [String: Any] { get }
     associatedtype EntityType: NSManagedObject, Objectable
