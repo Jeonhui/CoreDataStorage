@@ -105,7 +105,7 @@ public extension CoreDataStorage {
     ///   - predicate: predicate
     ///   - limit: number of entities to update
     /// - Returns: updated Entities into Structures
-    /// If result is empty, Create update Object.
+    /// If result is empty, Create updateObject.
     func update<O: Entitable>(_ updateObject: O, predicate: NSPredicate, limit: Int? = nil) -> AnyPublisher<[O], Error> {
         Future<[O], Error> { promise in
             self.persistentContainer.performBackgroundTask { context in
@@ -123,10 +123,11 @@ public extension CoreDataStorage {
                         }
                         return
                     }
+                    
                     if let entities = fetchEntities as? [O.EntityType] {
                         let limit = min(entities.count, limit ?? 1)
                         entities[0..<limit].forEach { entity in
-                            updateObject.propertyKeys.forEach { (key: String, value: Any) in
+                            updateObject.propertyKeyValues.forEach { (key: String, value: Any) in
                                 entity.setValue(value, forKey: key)
                             }
                         }
@@ -157,26 +158,21 @@ public extension CoreDataStorage {
                 let request: NSFetchRequest = O.EntityType.fetchRequest()
                 request.predicate = predicate
                 do {
-                    let fetchEntities = try context.fetch(request)
-                    if fetchEntities.isEmpty {
-                        promise(.success([]))
-                        return
-                    }
-                    
-                    if let entities = fetchEntities as? [O.EntityType] {
-                        entities.forEach { entity in
-                            updateValues.forEach { (key: String, value: Any) in
-                                entity.setValue(value, forKey: key)
-                            }
-                        }
-                        try context.save()
-                        guard let result = entities.map({ $0.toObject() }) as? [O] else {
-                            throw CoreDataStorageDetailError.wrongConnectError
-                        }
-                        promise(.success(result))
-                    }  else {
+                    let fetchedEntities = try context.fetch(request)
+                    guard let entities = fetchedEntities as? [O.EntityType] else {
                         throw CoreDataStorageDetailError.castError
                     }
+                    entities.forEach { entity in
+                        updateValues.forEach { (key: String, value: Any) in
+                            entity.setValue(value, forKey: key)
+                        }
+                    }
+                    
+                    try context.save()
+                    guard let result = entities.map({ $0.toObject() }) as? [O] else {
+                        throw CoreDataStorageDetailError.wrongConnectError
+                    }
+                    promise(.success(result))
                 } catch {
                     promise(.failure(CoreDataStorageError.updateError(error)))
                 }
